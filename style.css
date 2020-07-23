@@ -1,10 +1,24 @@
 body {
-    background-color: #1b1b1b;
+    background-color: #222222;
     font-family: Consolas;
+}
+#spacer {
+    height: 20px;
+}
+#banner {
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 1000px;
+    background-color: #333333;
 }
 h1 {
     color: #ffffff;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 46px;
 }
 p {
+    margin-left: 60px;
+    margin-right: 60px;
     color: #ffffff;
 }
