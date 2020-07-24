@@ -1,6 +1,6 @@
 body {
     background-color: #222222;
-    font-family: Consolas;
+    font-family: "Trebuchet MS";
 }
 #spacer {
     height: 20px;
@@ -8,11 +8,24 @@ body {
 #banner {
     margin-left: 200px;
     margin-right: 200px;
-    height: 1000px;
+    height: 2300px;
     background-color: #333333;
 }
+#server-icon {
+    align-content: center;
+}
+iframe {
+    width: 680px;
+    height: 800px;
+}
+img {
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
 ul {
-    list-style-type: none;
     background-color: #222222;
     color: #ffffff;
     margin-top: 0px;
@@ -24,6 +37,13 @@ ul {
 }
 a {
     color: #ffffff;
+}
+#git {
+    font-size: 30px;
+    margin-top: 60px;
+}
+#nav {
+    color: #ffffff;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 10px;
@@ -32,6 +52,7 @@ a {
 }
 h1 {
     color: #ffffff;
+    font-style: italic;
     margin-bottom: 40px;
     text-align: center;
     font-size: 46px;
