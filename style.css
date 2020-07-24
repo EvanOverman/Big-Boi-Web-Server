@@ -6,8 +6,8 @@ body {
     height: 20px;
 }
 #banner {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 20%;
+    margin-right: 20%;
     height: 2300px;
     background-color: #333333;
 }
@@ -26,14 +26,9 @@ img {
     margin-right: auto;
 }
 ul {
-    background-color: #222222;
+    background-color: #ffffff;
     color: #ffffff;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 0;
-    padding-right: 0;
+    height: 2px;
 }
 a {
     color: #ffffff;
@@ -44,10 +39,11 @@ a {
 }
 #nav {
     color: #ffffff;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    margin-right: 20px;
     background-color: #215d73;
 }
 h1 {
