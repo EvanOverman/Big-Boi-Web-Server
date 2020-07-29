@@ -60,7 +60,15 @@ server.get('/pics/screenshots/Screenshot7.png', (request, response) => {
 server.get('/pics/screenshots/Screenshot8.png', (request, response) => {
     console.log('\t[i] Server got request for /pics/screenshots/Screenshot8.png');
     response.sendFile(path.join(__dirname + '/pics/screenshots/Screenshot8.png'));
-});3
+});
+
+// Downloads
+/*
+server.get('/Downloads', (request, response) => {
+    console.log('[i] Server got request for /Downloads');
+    response.download(path.join(__dirname + '/pics/server-icon.jpg'));
+});
+*/
 
 // Minecraft server page.
 server.get('/mc', (request, response) => {
