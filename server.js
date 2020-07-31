@@ -1,5 +1,5 @@
 const { exec } = require('child_process');
-const { request, ServerResponse } = require('http');
+const { request, ServerResponse } = require('https');
 const { response } = require('express');
 
 let server = require('express')();
@@ -8,59 +8,54 @@ let path = require('path');
 // Home page.
 server.get('/', (request, response) => {
     console.log('[i] Server got request for /...');
-    response.sendFile(path.join(__dirname + '/index.html'));
+    response.sendFile(path.join(__dirname + '/pages/Home.html'));
 });
 
-// Individual files, things like stylesheets and pictures.
-server.get('/style.css', (request, response) => {
-    console.log('\t[i] Server got request for /style.css');
-    response.sendFile(path.join(__dirname + '/style.css'));
+server.get('/Home.html', (request, response) => {
+    console.log('[i] Server got request for /...');
+    response.sendFile(path.join(__dirname + '/pages/Home.html'));
 });
 
-server.get('/pics/server-icon.jpg', (request, response) => {
-    console.log('\t[i] Server got request for /pics/server-icon.jpg');
-    response.sendFile(path.join(__dirname + '/pics/server-icon.jpg'));
+server.get('/Github.html', (request, response) => {
+    console.log('[i] Server got request for /Github.html...');
+    response.sendFile(path.join(__dirname + '/pages/Github.html'));
 });
 
-server.get('/pics/screenshots/Screenshot1.png', (request, response) => {
-    console.log('\t[i] Server got request for /pics/screenshots/Screenshot1.png');
-    response.sendFile(path.join(__dirname + '/pics/screenshots/Screenshot1.png'));
+server.get('/MC%20Server.html', (request, response) => {
+    console.log('[i] Server got request for /...');
+    response.sendFile(path.join(__dirname + '/pages/MC Server.html'));
 });
 
-server.get('/pics/screenshots/Screenshot2.png', (request, response) => {
-    console.log('\t[i] Server got request for /pics/screenshots/Screenshot2.png');
-    response.sendFile(path.join(__dirname + '/pics/screenshots/Screenshot2.png'));
+server.get('/MC%20Server/1432709913880345cda7289e67cfeaa1.jpg', (request, response) => {
+    console.log('[i] Server got request for /MC%20Server/1432709913880345cda7289e67cfeaa1.jpg...');
+    response.sendFile(path.join(__dirname + '/pages/MC Server/1432709913880345cda7289e67cfeaa1.jpg'));
 });
 
-server.get('/pics/screenshots/Screenshot3.png', (request, response) => {
-    console.log('\t[i] Server got request for /pics/screenshots/Screenshot3.png');
-    response.sendFile(path.join(__dirname + '/pics/screenshots/Screenshot3.png'));
+server.get('/MC%20Server/c53a37ec0a1ffca0ff6027ab5e029bb4.jpg', (request, response) => {
+    console.log('[i] Server got request for /MC%20Server/c53a37ec0a1ffca0ff6027ab5e029bb4.jpg...');
+    response.sendFile(path.join(__dirname + '/pages/MC Server/c53a37ec0a1ffca0ff6027ab5e029bb4.jpg'))
 });
 
-server.get('/pics/screenshots/Screenshot4.png', (request, response) => {
-    console.log('\t[i] Server got request for /pics/screenshots/Screenshot4.png');
-    response.sendFile(path.join(__dirname + '/pics/screenshots/Screenshot4.png'));
+server.get('/Home/0697e5697645bd89d6acbe8cb3f36c5c.jpg', (request, response) => {
+    console.log('[i] Server got request for /Home/0697e5697645bd89d6acbe8cb3f36c5c.jpg...');
+    response.sendFile(path.join(__dirname + '/pages/Home/0697e5697645bd89d6acbe8cb3f36c5c.jpg'))
 });
 
-server.get('/pics/screenshots/Screenshot5.png', (request, response) => {
-    console.log('\t[i] Server got request for /pics/screenshots/Screenshot5.png');
-    response.sendFile(path.join(__dirname + '/pics/screenshots/Screenshot5.png'));
+server.get('/Home/a3f3c36821471f564d06f0c985666950.jpg', (request, response) => {
+    console.log('[i] Server got request for /Home/a3f3c36821471f564d06f0c985666950.jpg...');
+    response.sendFile(path.join(__dirname + '/pages/Home/a3f3c36821471f564d06f0c985666950.jpg'))
 });
 
-server.get('/pics/screenshots/Screenshot6.png', (request, response) => {
-    console.log('\t[i] Server got request for /pics/screenshots/Screenshot6.png');
-    response.sendFile(path.join(__dirname + '/pics/screenshots/Screenshot6.png'));
+server.get('/Github/0d43241299e499aab27dc46f20f34256.jpg', (request, response) => {
+    console.log('[i] Server got request for /Github/0d43241299e499aab27dc46f20f34256.jpg...');
+    response.sendFile(path.join(__dirname + '/pages/Github/0d43241299e499aab27dc46f20f34256.jpg'))
 });
 
-server.get('/pics/screenshots/Screenshot7.png', (request, response) => {
-    console.log('\t[i] Server got request for /pics/screenshots/Screenshot7.png');
-    response.sendFile(path.join(__dirname + '/pics/screenshots/Screenshot7.png'));
+server.get('/Github/d3c7bc0ae9d762f3d397fee2af89a3fa.jpg', (request, response) => {
+    console.log('[i] Server got request for /Github/d3c7bc0ae9d762f3d397fee2af89a3fa.jpg...');
+    response.sendFile(path.join(__dirname + '/pages/Github/d3c7bc0ae9d762f3d397fee2af89a3fa.jpg'))
 });
 
-server.get('/pics/screenshots/Screenshot8.png', (request, response) => {
-    console.log('\t[i] Server got request for /pics/screenshots/Screenshot8.png');
-    response.sendFile(path.join(__dirname + '/pics/screenshots/Screenshot8.png'));
-});
 
 // Downloads
 /*
@@ -70,15 +65,5 @@ server.get('/Downloads', (request, response) => {
 });
 */
 
-// Minecraft server page.
-server.get('/mc', (request, response) => {
-    console.log('[i] Server got request for /mc...');
-    response.sendFile(path.join(__dirname + '/pages/mc.html'));
-});
-
-server.get('/git', (request, response) => {
-    console.log('[i] Server got request for /git...');
-    response.sendFile(path.join(__dirname + '/pages/git.html'));
-});
 
 server.listen(3000, console.log('[i] Server listening on port 3000'))
