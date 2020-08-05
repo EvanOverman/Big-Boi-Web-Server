@@ -1,36 +1,43 @@
-const { exec } = require('child_process');
-const { request, ServerResponse } = require('https');
-const { response } = require('express');
-
-let vhost = require("vhost");
+let express = require('express');
 let path = require('path');
-const express = require('express');
+
 let server = express();
-let www = express()
 
-www.use(
-    vhost("www.*", function handle(request, response, next) {
-        console.dir(request.vhost.host);
-        console.dir(request.vhost.hostname);
-        console.dir(request.vhost.length);
-        console.dir(request.vhost[0]);
-        response.send(request.vhost.host);
-    })
-);
 
-www.use(
-    vhost("pro.*", function handle(req, res, next) {
-        response.send(request.vhost.host);
-    })
-);
-
-www.use(vhost("server.*", server));
-
-www.get('/', (request, response) => {
-    response.send('yeet');
+server.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/pages/Home.html'));
+    console.log('[i] Server got request for / ...');
 });
 
+server.get('/Home.html', (req, res) => {
+    res.sendFile(path.join(__dirname + '/pages/Home.html'));
+    console.log('[i] Server got request for /Home.html ...');
+});
+
+server.get('/Github.html', (req, res) => {
+    res.sendFile(path.join(__dirname + '/pages/Github.html'));
+    console.log('[i] Server got request for /Github.html ...');
+});
+
+server.get('/MC Server.html', (req, res) => {
+    res.sendFile(path.join(__dirname + '/pages/MC Server.html'));
+    console.log('[i] Server got request for /MC Server.html ...');
+});
+
+server.get('/Primary Server.html', (req, res) => {
+    res.sendFile(path.join(__dirname + '/pages/Primary Server.html'));
+    console.log('[i] Server got request for /Primary Server.html ...');
+});
+
+server.get('/Secondary Server.html', (req, res) => {
+    res.sendFile(path.join(__dirname + '/pages/Secondary Server.html'));
+    console.log('[i] Server got request for /Secondary Server.html ...');
+});
+
+
+
 // Downloads
+
 /*
 server.get('/Downloads', (request, response) => {
     console.log('[i] Server got request for /Downloads');
