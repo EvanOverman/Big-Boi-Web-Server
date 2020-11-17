@@ -1,0 +1,53 @@
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #FAA719;
+	background-size: 100%;
+
+	margin: 0px;
+	height: 100%;
+	background-image: url(/pictures/background.jpg);
+	font-family: helvetica;
+
+	position:relative;
+    z-index:1;
+    background-attachment:fixed;
+}
+
+p {
+	margin-top: 50px;
+	margin-right: 50px;
+	margin-left: 80px;
+}
+
+h1 {
+	color: #FFFFFF;
+	margin-left: 20%;
+	margin-bottom: 0px;
+	margin-right: 40px;
+	font-size: 80px;
+	text-align: right;
+}
+
+.banner {
+	background-color: #212121;
+	color: #FFFFFF;
+
+	position:relative;
+    z-index:2;
+
+	margin-left: 20%;
+	margin-right: 0px;
+	margin-top: 170px;
+	margin-bottom: 0px;
+
+	height: 100%;
+}
+
+.spacer {
+	margin-bottom: 80px;
+	width: 100%;
+	color: rgba(0,0,0,0);
+}

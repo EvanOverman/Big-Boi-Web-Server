@@ -1,1 +1,50 @@
-No content yet, run program to populate this file.
+express = require('express');
+path = require('path');
+app = express();
+
+app.get('/css', (req, res) => {
+res.sendFile(path.join(__dirname + '/organized/css'));
+console.log('Got request for /css ... ');
+});
+
+app.get('/downloads', (req, res) => {
+res.sendFile(path.join(__dirname + '/organized/downloads'));
+console.log('Got request for /downloads ... ');
+});
+
+app.get('/index.html', (req, res) => {
+res.sendFile(path.join(__dirname + '/organized/index.html'));
+console.log('Got request for /index.html ... ');
+});
+
+app.get('/js', (req, res) => {
+res.sendFile(path.join(__dirname + '/organized/js'));
+console.log('Got request for /js ... ');
+});
+
+app.get('/pages', (req, res) => {
+res.sendFile(path.join(__dirname + '/organized/pages'));
+console.log('Got request for /pages ... ');
+});
+
+app.get('/pictures', (req, res) => {
+res.sendFile(path.join(__dirname + '/organized/pictures'));
+console.log('Got request for /pictures ... ');
+});
+
+app.get('/pictures/background.jpg', (req, res) => {
+res.sendFile(path.join(__dirname + '/organized/pictures/background.jpg'));
+console.log('Got request for /pictures/background.jpg ... ');
+});
+
+app.get('/css/stylesheet.css', (req, res) => {
+res.sendFile(path.join(__dirname + '/organized/css/stylesheet.css'));
+console.log('Got request for /css/stylesheet.css ... ');
+});
+
+app.get('/downloads/putty', (req, res) => {
+res.download(path.join(__dirname + '/organized/downloads/putty'));
+console.log('Got request for /downloads/putty ... ');
+});
+
+app.listen(3000, console.log('Server listening on port 3000'));
