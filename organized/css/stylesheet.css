@@ -11,9 +11,9 @@ body {
 	background-image: url(/pictures/background.jpg);
 	font-family: helvetica;
 
-	position:relative;
-    z-index:1;
-    background-attachment:fixed;
+	position: relative;
+    z-index: 1;
+    background-attachment: fixed;
 }
 
 p {
@@ -29,11 +29,13 @@ h1 {
 	margin-right: 40px;
 	font-size: 80px;
 	text-align: right;
+	text-shadow: 1px 1px 2px #000000;
 }
 
 .banner {
-	background-color: #212121;
+	background-color: #121212;
 	color: #FFFFFF;
+	box-shadow: 0 6px 6px 0 #000000;
 
 	position:relative;
     z-index:2;
