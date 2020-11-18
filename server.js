@@ -62,9 +62,4 @@ res.sendFile(path.join(__dirname + '/organized/css/stylesheet.css'));
 console.log('Got request for /css/stylesheet.css ... ');
 });
 
-app.get('/downloads/putty', (req, res) => {
-res.download(path.join(__dirname + '/organized/downloads/putty'));
-console.log('Got request for /downloads/putty ... ');
-});
-
 app.listen(80, console.log('Server listening on port 80'));
