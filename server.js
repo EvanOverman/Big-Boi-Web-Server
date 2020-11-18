@@ -37,6 +37,11 @@ res.sendFile(path.join(__dirname + '/organized/pictures'));
 console.log('Got request for /pictures ... ');
 });
 
+app.get('/pages/github.html', (req, res) => {
+res.sendFile(path.join(__dirname + '/organized/pages/github.html'));
+console.log('Got request for /pages/github.html ... ');
+});
+
 app.get('/pictures/background.jpg', (req, res) => {
 res.sendFile(path.join(__dirname + '/organized/pictures/background.jpg'));
 console.log('Got request for /pictures/background.jpg ... ');

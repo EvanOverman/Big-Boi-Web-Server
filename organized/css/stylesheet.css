@@ -12,8 +12,8 @@ body {
 	font-family: helvetica;
 
 	position: relative;
-    z-index: 1;
-    background-attachment: fixed;
+	z-index: 1;
+	background-attachment: fixed;
 }
 
 p {
@@ -33,13 +33,48 @@ h1 {
 	text-shadow: 1px 1px 2px #000000;
 }
 
+h2 {
+	color: #FFFFFF;
+	margin-left: 80px;
+	margin-bottom: 0px;
+	margin-right: 50px;
+	font-size: 50px;
+	text-align: left;
+}
+
+ul {
+	list-style-type: none;
+	background-color: #121212;
+}
+
+li {
+	float: left;
+	background-color: #121212;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+	margin-right: 24px;
+}
+
+.navbar {
+	display: block;
+	height: 40px;
+	padding: 4px;
+	background-color: #121212;
+	box-shadow: 0 1px 6px 0 #000000;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
 .banner {
 	background-color: #121212;
 	color: #FFFFFF;
 	box-shadow: 0 1px 6px 0 #000000;
 
 	position:relative;
-    z-index:2;
+	z-index:2;
 
 	margin-left: 25%;
 	margin-right: 0px;
@@ -48,6 +83,7 @@ h1 {
 }
 
 .spacer {
+	font-size: 1px;
 	margin-bottom: 80px;
 	width: 100%;
 	color: rgba(0,0,0,0);
